@@ -3,10 +3,11 @@ INSTALL WORDPRESS:
 
 Run docker app from your project
 
+INIT from command line:
 
-https://www.digitalocean.com/community/questions/docker-compose-for-wp-and-phpmyadmin
+`docker-compose up` or
 
-INIT from command line: `docker-compose up` or `docker-compose up -d` for detached mode.
+`docker-compose up -d` for detached mode.
 
 #####
 http://localhost:8181 to view phpmyadmin
@@ -14,7 +15,7 @@ username: wordpress
 password: wordpress
 
 
-http://localhost:8000 to begin wp install
+http://localhost:8000 to begin wp installations
 
 Update wp core to latest
 Update Themes to latest
@@ -27,13 +28,15 @@ Customize -> Homepage Settings -> Homepage = Home, Posts page = Blog
 Install Sniglet plugin
 -----------------------
 
-git clone https://github.com/hawkwynd/sniglets.git (hawkwynd / Sc00tre1)
+`cd wp-content/plugins`
+
+git clone https://github.com/hawkwynd/sniglets.git
 
 http://localhost:8000/wp-admin/plugins.php
 
 Activate Sniglet plugin
 
-Edit wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php
+Edit  `wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php`
 
 Change code to add the random sniglet call at line +- 42:
 
