@@ -1,10 +1,8 @@
-GS&F Lunch & Learn notes:
 
 INSTALL WORDPRESS:
 
-Run docker app
+Run docker app from your project
 
-cd ~/project/LNL
 
 https://www.digitalocean.com/community/questions/docker-compose-for-wp-and-phpmyadmin
 
@@ -28,8 +26,6 @@ Customize -> Homepage Settings -> Homepage = Home, Posts page = Blog
 
 Install Sniglet plugin
 -----------------------
-
-cd projects/lnl_wp/wp-content/plugins
 
 git clone https://github.com/hawkwynd/sniglets.git (hawkwynd / Sc00tre1)
 
