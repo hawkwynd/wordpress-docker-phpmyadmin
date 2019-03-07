@@ -1,0 +1,61 @@
+GS&F Lunch & Learn notes:
+
+INSTALL WORDPRESS:
+
+Run docker app
+
+cd ~/project/LNL
+
+https://www.digitalocean.com/community/questions/docker-compose-for-wp-and-phpmyadmin
+
+INIT from command line: `docker-compose up` or `docker-compose up -d` for detached mode.
+
+#####
+http://localhost:8181 to view phpmyadmin
+username: wordpress
+password: wordpress
+
+
+http://localhost:8000 to begin wp install
+
+Update wp core to latest
+Update Themes to latest
+
+Activate twentyseventeen theme
+
+Customize -> Homepage Settings -> Homepage = Home, Posts page = Blog
+
+
+Install Sniglet plugin
+-----------------------
+
+cd projects/lnl_wp/wp-content/plugins
+
+git clone https://github.com/hawkwynd/sniglets.git (hawkwynd / Sc00tre1)
+
+http://localhost:8000/wp-admin/plugins.php
+
+Activate Sniglet plugin
+
+Edit wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php
+
+Change code to add the random sniglet call at line +- 42:
+
+                     <h2>The Daily Sniglet</h2>
+
+                   				<?php
+                                   sniglet_random();
+
+                   					/* translators: %s: Name of current post */
+
+                   					the_content(
+                   						sprintf(
+                   							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+                   							get_the_title()
+                                               )
+                   					);
+
+Save and browse to home page to see the sniglet load a random entry from the database into the page.
+
+
+
