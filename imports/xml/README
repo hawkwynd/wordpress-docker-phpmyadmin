@@ -1,0 +1,10 @@
+Use the XML files to import into a new wordpress website install.
+
+WP-Admin->Tools->Import->Wordpress->Run Importer
+
+Contains Lorem Ipsum content and minimal images.
+
+When importing, select "download images" options.
+
+=== Mysql Approach ===
+# Write a php script to perform the inserts into posts/categories and other wordpress related items, like menus and settings.
